@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hwtest1</title>
+  </head>
+  <link rel="stylesheet" href="styles.css" />
+  <body>
+    <div id="config">
+      <label for="cb-use-gpu">Use GPU</label>
+      <input id="cb-use-gpu" name="cb-use-gpu" type="checkbox" checked />
+      <br />
+      <label for="input-boxsize">Box size in px</label>
+      <input id="input-boxsize" name="input-boxsize" type="number" value="5" />
+      <br />
+      <label for="input-box-num">Number of boxes</label>
+      <input
+        id="input-box-num"
+        name="iinput-box-num"
+        type="number"
+        value="10000"
+      />
+      <br />
+      <button onclick="init()">Start</button>
+      <button onclick="clean()">Stop</button>
+      <div id="fps"></div>
+      <div id="init-placeholder">Initializing... Please wait</div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(init, 500);
+      });
+    </script>
+  </body>
+</html>
